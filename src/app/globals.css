@@ -31,3 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+
+h1, h2, h3, h4, h5, h6, p, a, li, div, span {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.1;
+  letter-spacing: 0;
+  }
+  
+  h1 {
+      font-weight: 600; /* 60 转换为 600，这是一个合理的推测 */
+      font-size: 60px; /* 字体大小为 60px */
+    }
