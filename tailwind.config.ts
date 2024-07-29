@@ -14,10 +14,10 @@ const config: Config = {
       keyframes:{
         'random-bounce': {
           '0%, 100%': { transform: 'translate(0,0)'},
-          '20%': { transform: 'translate(50px, -50px)'},
-          '40%': { transform: 'translate(100px, -100px)'},
-          '60%': { transform: 'translate(150px, -150px)'},
-          '80%': { transform: 'translate(-50px, -40px)'}
+          '20%': { transform: 'translate(200px, -200px)'},
+          '40%': { transform: 'translate(400px, -400px)'},
+          '60%': { transform: 'translate(200px, -200px)'},
+          '80%': { transform: 'translate(-200px, -200px)'}
         }
       },
       backgroundImage: {
