@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { Main } from "next/document"
-import { MainLayout } from "@/components/MainLayout"
+import "../styles/global.css";
+import "../styles/style.css";
+import { MainLayout } from "@/components/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: 'Access Mate Australia',
-    description: 'Access Mate Australia is a platform that connects people with disabilities to support workers',
-}
+  title: "Access Mate Australia",
+  description: "Access Mate Australia is a platform that connects people with disabilities to support workers",
+};
 
 export default function RootLayout({
   children,
@@ -19,10 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MainLayout>
-        {children}
-        </MainLayout>
-        </body>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   );
 }

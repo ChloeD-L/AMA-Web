@@ -1,29 +1,60 @@
-import React, { ReactNode } from 'react';
+"use client";
+
+import Link from "next/link";
+import React, { ReactNode, useState } from "react";
 
 interface HeaderProps {
-  children?: ReactNode; // 定义 children 为可选的 React 节点类型
+  children?: ReactNode;
 }
 
 const Header: React.FC<HeaderProps> = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="bg-white shadow-md py-8 h-20 z-10">
-      <div className="container mx-auto flex items-center justify-between px-4">
-        <div className="logo">
-          <a href="#" className="text-lg font-bold text-gray-800">MyBrand</a>
+    <header className="bg-white shadow-md py-10 h-30 z-10">
+      <nav className="container mx-auto flex items-center justify-between md:px-16 px-4">
+        <Link href="/">
+          <img src="/logo.svg" alt="logo" className="w-24 cursor-pointer" />
+        </Link>
+        {/* Navigation Links */}
+        <div className="flex space-x-6 mr-10 ">
+          <Link href="/" className="hover:text-tertiary font-medium">
+            Home
+          </Link>
+          <Link href="/contact" className="hover:text-tertiary font-medium">
+            Contact Us
+          </Link>
+
+          {/* Services Dropdown */}
+          <div className="relative cursor-pointer " onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+            <span className="hover:text-tertiary font-medium">Services</span>
+            {isOpen && (
+              <div className="absolute left-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg z-10">
+                <Link href="/web-design" className="block px-4 py-2 hover:bg-gray-200">
+                  Web Design
+                </Link>
+                <Link href="/app-development" className="block px-4 py-2 hover:bg-gray-200">
+                  App Development
+                </Link>
+                <Link href="/seo" className="block px-4 py-2 hover:bg-gray-200">
+                  SEO Services
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* <Link href="/contact" className="hover:text-tertiary font-medium">
+            Contact Us
+          </Link> */}
         </div>
-        <nav>
-          <ul className="flex items-center space-x-24">
-            <li><a href="#home" className="text-stone-900 text-base font-medium hover:text-primary">Home</a></li>
-            <li><a href="#about" className="text-stone-900 text-base font-medium hover:text-primary">About</a></li>
-            <li><a href="#services" className="text-stone-900 text-base font-medium hover:text-primary">Services</a></li>
-            <li><a href="#contact" className="text-stone-900 text-base font-medium hover:text-primary">Contact</a></li>
-          </ul>
-        </nav>
-        {children}  {/* 展示 children，如果有的话 */}
-      </div>
+        {children} {/* This is where the children will be rendered */}
+      </nav>
     </header>
   );
 };
 
 export default Header;
-

@@ -32,13 +32,40 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li, div, span {
-  font-family: 'Outfit', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+div,
+span {
+  font-family: "Outfit", sans-serif;
   line-height: 1.1;
   letter-spacing: 0;
-  }
-  
-  /* h1 {
+}
+
+/* h1 {
       font-weight: 600; 
       font-size: 100px; 
 } */
+/* styles/globals.css */
+
+@layer components {
+  h3 {
+    @apply text-2xl font-semibold leading-tight;
+  }
+
+  @screen sm {
+    h3 {
+      @apply text-lg;
+    }
+  }
+}
+
+footer {
+  @apply text-lg text-center sm:text-base;
+}
