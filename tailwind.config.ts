@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      scale: {
+        "400": "4.0", // Custom scale value of 115%
+        "300": "3.0", // Custom scale value of 115%
+        "200": "2.0", // Custom scale value of 115%
+      },
       boxShadow: {
         "footer-custom": "0 -2px 5px rgba(0, 0, 0, 0.05)",
       },
@@ -44,7 +49,9 @@ const config: Config = {
       screens: {
         sm: "480px", // small screen
         md: "768px", // tablets and small laptops
+        mi: "1024px", // medium screens, laptops
         lg: "1200px", // desktops
+        xlg: "1440px", // extra large screens, tv
       },
     },
   },

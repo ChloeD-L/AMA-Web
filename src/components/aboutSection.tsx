@@ -22,11 +22,11 @@ export const AboutUsSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="h-screen bg-white pt-12 lg:pt-36 px-10 min-h-screen relative w-full">
+    <section id="about" className="h-screen bg-white pt-30 lg:pt-48 px-10 min-h-screen relative w-full">
       {/* <div className="triangle"></div> */}
       {/* <TriangleImage top="48%" left="10%" width="50px" height="50px" /> */}
-      <Square top="4%" left="80%" />
-      <Circle top="8%" left="85%" />
+      <Square top="12%" left="80%" />
+      <Circle top="18%" left="85%" />
 
       {/* <Square top="60%" left="10%" />
       <Circle top="55%" left="15%" /> */}

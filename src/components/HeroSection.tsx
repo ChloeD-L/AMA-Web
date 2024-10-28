@@ -6,44 +6,87 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
   return (
-    <section id="home" className="w-full h-screen flex px-16 py-16 overflow-hidden">
-      <div className="container mx-auto flex items-center h-full gap-0">
+    <section id="home" className="w-full h-screen flex flex-col overflow-hidden ">
+      <div className="flex flex-col items-center w-full h-3/4 gap-0">
         {/* 左侧灰色半透明背景 (65%) */}
-        <div className="w-2/3 relative bg-gray-300 bg-opacity-80">
-          {/* 背景图片 */}
-          <img
-            src="/images/left-background-image.jpg"
-            alt="Left Background"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          {/* 内容容器 */}
-          <div className="relative z-10 p-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-purple-900 mb-6 leading-tight">
-              Compassion in Care <br />
-              <span className="text-blue-500">Excellence in Support</span>
-            </h1>
-            <p className="text-lg text-gray-600 mb-6">Contact us for disability daily support, respite, and SIL</p>
-            <button className="bg-blue-500 text-white py-3 px-6 rounded-lg">Our Service</button>
+        <div className="flex flex-row w-full h-full text-left">
+          <div className="w-2/3 relative flex items-center pl-4 md:pl-10 lg:pl-16 md:pb-20 pb-8">
+            {/* Background Image */}
+            <img
+              src="/people.png"
+              alt="Left Background"
+              className="absolute inset-0 max-w-[80%] pt-40 object-contain z-0"
+            />
+            {/* Gray Overlay */}
+            <div className="absolute inset-0 bg-[#EDEDE6] bg-opacity-85 z-10"></div>
+            {/* Content Container - Centered Horizontally and Vertically */}
+            <div className="relative z-20 p-8 text-left xlg:w-full md:w-3/4">
+              <h1 className="text-4xl mi:text-5xl xlg:text-6xl font-bold text-[#722E7B] mb-2">
+                Compassion in <span className=" text-secondary "> Care</span>
+              </h1>
+              <h1 className="text-4xl mi:text-5xl xlg:text-6xl font-bold text-secondary mb-4">
+                <span className="text-[#722E7B]"> Excellence in</span> Support
+              </h1>
+              <p className="text-lg text-gray-900 mb-10">Contact us for disability daily support, respite, and SIL</p>
+              <div className="flex justify-left">
+                <button className="bg-secondary text-white font-bold py-2 px-6 rounded-full border-4 border-secondary hover:bg-white hover:text-secondary">
+                  Our Service
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* 右侧紫色背景 (35%) */}
-        <div className="w-1/3 relative bg-purple-600">
-          {/* 中间的不规则图形和图片 */}
-          <div className="absolute top-0 left-[-10%] w-full h-full flex items-center justify-center">
-            <div className="relative">
-              {/* 不规则形状 */}
-              <img src="/images/irregular-bg.svg" alt="Irregular Shape" className="w-full h-auto" />
-              {/* 叠加在不规则形状上的图片 */}
-              <img src="/images/hero-image.svg" alt="Hero Image" className="absolute top-0 left-0 w-3/4 h-auto z-10" />
+          {/* 右侧紫色背景 (35%) */}
+          <div className="w-1/3 relative bg-[#722E7B]">
+            {/* 中间的不规则图形和图片 */}
+            <div className="absolute top-0 lg:left-[-10%] md:left-[-5%] w-[600px] h-[800px] scale-125 flex items-center justify-center z-50">
+              <div className="relative left-[-200px]">
+                {/* 不规则形状 */}
+                <img
+                  src="geo.svg"
+                  alt="Irregular Shape"
+                  className="w-full lg:scale-200 h-auto mi:scale-150 scale-125 z-10 "
+                />
+                {/* 叠加在不规则形状上的图片 */}
+                <img
+                  src="hero-mid.png"
+                  alt="Hero Image"
+                  className="absolute bottom-20 left-20 lg:left-30 w-3/4 lg:scale-300 h-auto mi:scale-200 scale-150 z-10"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="w-full h-1/4 relative -top-[10%] z-20">
+        <div className="flex flex-row justify-between items-center w-full h-full">
+          <div className="relative flex items-center justify-center w-1/3 h-full">
+            <img
+              src="/hero-bottom-left.jpg"
+              alt="People Image"
+              className="absolute inset-0 w-full object-contain z-0"
+            />
+            <div className="absolute inset-0 bg-secondary bg-opacity-75 z-10 h-[200%]"></div>
+          </div>
+          <div className="relative flex items-center justify-center w-1/3 h-full">
+            <img
+              src="/hero-bottom-right.jpg"
+              alt="People Image"
+              className="absolute inset-0 w-full object-contain z-0"
+            />
+            <div className="absolute inset-0 bg-tertiary bg-opacity-75 z-10 h-[200%]"></div>
+          </div>
+          <div className="relative flex items-center justify-center w-1/3 h-full">
+            <img src="/hero-bottom-mid.jpg" alt="People Image" className="absolute inset-0 w-full object-contain z-0" />
+            <div className="absolute inset-0 bg-primary bg-opacity-75 z-10 h-[200%]"></div>
+          </div>
+        </div>
+      </div>
+
       {/* 下方的三个小方块 */}
-      <div className="relative mt-10 flex justify-center space-x-6 mx-auto w-full max-w-5xl">
-        {/* Block 1 */}
+      {/* <div className="relative mt-10 flex justify-center space-x-6 mx-auto w-full max-w-5xl">
+        
         <div className="flex-1 bg-white relative p-6 rounded-lg shadow-lg">
           <img
             src="/images/block-1-bg.jpg"
@@ -56,7 +99,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
           </div>
         </div>
 
-        {/* Block 2 */}
+    
         <div className="flex-1 bg-white relative p-6 rounded-lg shadow-lg">
           <img
             src="/images/block-2-bg.jpg"
@@ -69,7 +112,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
           </div>
         </div>
 
-        {/* Block 3 */}
         <div className="flex-1 bg-white relative p-6 rounded-lg shadow-lg">
           <img
             src="/images/block-3-bg.jpg"
@@ -81,7 +123,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             <p className="mt-4">Description for block 3</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
 
     // <section id="home" className={`flex md:grid md:grid-cols-14 flex-col md:h-screen ${styles.paddingY}`} >
