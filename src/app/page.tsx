@@ -1,13 +1,25 @@
-import Image from "next/image";
+import { Footer } from "@/components/Footer";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import { AboutUsSection } from "@/components/aboutSection";
+import ContactUsSection from "@/components/contactSection";
 
 export default function Home() {
   return (
-    <div>
-      {/* <div className="w-screen h-screen absolute pt-20 -z-10">
-                  <div className="absolute left-[-3rem] top-[5rem] w-[20rem] h-[20rem] rounded-full bg-primary-blur blur-xl"></div>
-                  <div className="absolute right-[-3rem] bottom-10 w-[20rem] h-[20rem] rounded-full bg-secondary-blur blur-2xl"></div>
-              </div> */}
-      <div className="my-32"></div>
+    <div className="h-screen w-full snap-y snap-mandatory overflow-y-scroll">
+      <Header />
+      <section className="snap-start">
+        <HeroSection />
+      </section>
+      <section className="snap-center">
+        <AboutUsSection />
+      </section>
+      <section className="snap-center ">
+        <ContactUsSection />
+      </section>
+      <section className="snap-end">
+        <Footer />
+      </section>
     </div>
   );
 }

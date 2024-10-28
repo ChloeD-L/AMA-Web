@@ -5,7 +5,7 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-white text-black w-screen py-10 text-sm md:text-base shadow-footer-custom">
+    <footer className="bg-white text-black  py-10 text-sm md:text-base shadow-footer-custom">
       <div className="container mx-auto flex flex-row sm:items-start iterms-center justify-between lg:px-16 md:gap-0 px-4 md:px-10">
         {/* <img src="/logo.svg" alt="logo" className="hidden w-24 cursor-pointer" />
         <h3 className="text-center text-primary h3 hidden">Why AMA?</h3> */}
