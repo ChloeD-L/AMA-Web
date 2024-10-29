@@ -39,7 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
           {/* 右侧紫色背景 (35%) */}
           <div className="w-1/3 relative bg-[#722E7B]">
             {/* 中间的不规则图形和图片 */}
-            <div className="absolute top-0 lg:left-[-10%] md:left-[-5%] w-[600px] h-[800px] scale-125 flex items-center justify-center z-50">
+            <div className="absolute top-0 lg:left-[-10%] md:left-[-5%] w-[600px] h-[800px] scale-125 flex items-center justify-center z-10">
               <div className="relative left-[-200px]">
                 {/* 不规则形状 */}
                 <img
@@ -59,27 +59,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
         </div>
       </div>
 
-      <div className="w-full h-1/4 relative -top-[10%] z-20">
+      <div className="w-full h-1/4 relative -top-[10%] z-50">
         <div className="flex flex-row justify-between items-center w-full h-full">
           <div className="relative flex items-center justify-center w-1/3 h-full">
-            <img
-              src="/hero-bottom-left.jpg"
-              alt="People Image"
-              className="absolute inset-0 w-full object-contain z-0"
-            />
-            <div className="absolute inset-0 bg-secondary bg-opacity-75 z-10 h-[200%]"></div>
+            <img src="/hero-bottom-left.jpg" alt="People Image" className="absolute inset-0 w-full object-cover z-20" />
+            <div className="absolute inset-0 bg-secondary bg-opacity-75 z-30 h-[200%]"></div>
           </div>
           <div className="relative flex items-center justify-center w-1/3 h-full">
             <img
               src="/hero-bottom-right.jpg"
               alt="People Image"
-              className="absolute inset-0 w-full object-contain z-0"
+              className="absolute inset-0 w-full object-contain z-20"
             />
-            <div className="absolute inset-0 bg-tertiary bg-opacity-75 z-10 h-[200%]"></div>
+            <div className="absolute inset-0 bg-tertiary bg-opacity-75 z-30 h-[200%]"></div>
           </div>
-          <div className="relative flex items-center justify-center w-1/3 h-full">
-            <img src="/hero-bottom-mid.jpg" alt="People Image" className="absolute inset-0 w-full object-contain z-0" />
-            <div className="absolute inset-0 bg-primary bg-opacity-75 z-10 h-[200%]"></div>
+          <div className="relative flex items-center justify-center w-1/3 h-full ">
+            <img
+              src="/hero-bottom-mid.jpg"
+              alt="People Image"
+              className="absolute inset-0 w-full object-contain z-20"
+            />
+            <div className="absolute inset-0 bg-primary bg-opacity-75 z-30 h-[200%]"></div>
           </div>
         </div>
       </div>
