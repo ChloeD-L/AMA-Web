@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children }) => {
             <img
               src="/people.png"
               alt="Left Background"
-              className="absolute inset-0 max-w-[80%] pt-40 object-contain z-0"
+              className="absolute max-w-[80%] pt-40 object-contain z-0 translate-x-10"
             />
             {/* Gray Overlay */}
             <div className="absolute inset-0 bg-[#EDEDE6] bg-opacity-85 z-10"></div>
