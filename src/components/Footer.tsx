@@ -30,12 +30,12 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-5">
           <h3 className="text-center text-primary md:text-xl text-lg">Contact Us</h3>
           <div className="flex flex-col items-center justify-center gap-2">
-            <p className="text-center text-black footer">Tel: 0482 026 239</p>
+            <p className="text-center text-black footer">Tel: 1300 188 588</p>
             <p className="text-center text-black footer">info@accessmateau.com</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
-            <p className="text-center text-black footer">Melbourne, Victoria</p>
-            <p className="text-center text-black footer">AUstralia</p>
+            <p className="text-center text-black footer">Suite 105, 672 Glenferrie Rd</p>
+            <p className="text-center text-black footer">Howthorn VIC 3122</p>
           </div>
         </div>
         {/* <p className="text-center">Access Mate Australia</p>

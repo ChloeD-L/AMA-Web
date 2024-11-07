@@ -4,9 +4,9 @@ import React from "react";
 
 const ContactUsSection: React.FC = () => {
   return (
-    <section id="contact" className="w-full h-screen bg-white px-4 md:px-10 lg:px-16 py-10">
-      <div className="container mx-auto flex flex-row items-center h-full gap-0 ">
-        <img src="/2.jpg" alt="Contact Us" className="w-1/2 h-auto relative -left-48" />
+    <section id="contact" className="w-full max-h-screen bg-white px-4 md:px-10 lg:px-16 py-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-center h-full gap-0 ">
+        <img src="/2.jpg" alt="Contact Us" className="w-full md:w-1/2 h-auto relative md:-left-48" />
         <div className="flex flex-col items-center justify-center gap-10 lg:w-4/5 text-center md:w-3/5 ">
           <div className="flex flex-col items-center gap-5">
             <h2 className="text-3xl md:text-5xl font-bold text-black leading-10">

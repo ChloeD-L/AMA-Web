@@ -22,7 +22,7 @@ export const AboutUsSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="h-screen bg-white pt-30 lg:pt-48 px-10 min-h-screen relative w-full">
+    <section id="about" className="max-h-screen bg-white pt-10 md:pt-30 lg:pt-48 px-10 min-h-screen relative w-full">
       {/* <div className="triangle"></div> */}
       {/* <TriangleImage top="48%" left="10%" width="50px" height="50px" /> */}
       <Square top="12%" left="80%" />

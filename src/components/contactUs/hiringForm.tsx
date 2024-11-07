@@ -3,7 +3,7 @@ import { TriangleImage } from "../geometric";
 
 const HiringForm = () => {
   return (
-    <section className="items-start h-screen py-10">
+    <section className="items-start min-h-screen py-10">
       <div className="container mx-auto ">
         <h1 className="text-3xl font-bold text-center mb-16">
           We’re Hiring Disability Support Workers And Home Care Package Cares Across

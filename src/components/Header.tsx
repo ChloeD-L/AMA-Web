@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
   };
 
   return (
-    <header className="bg-white shadow-lg sticky py-5 h-30 z-50 top-0 left-0 right-0">
+    <header className="bg-white shadow-lg md:sticky py-5 h-30 z-50 top-0 left-0 right-0">
       <nav className="container mx-auto flex items-center justify-between md:px-10 px-4">
         <Link href="/">
           <img src="/logo.svg" alt="logo" className="w-24 cursor-pointer" />
